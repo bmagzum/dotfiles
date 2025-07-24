@@ -52,6 +52,7 @@ apps=(
     docker
     eza
     fzf
+    firfox
     gnome-shell-extensions
     gnome-system-monitor
     gnome-browser-connector
@@ -82,6 +83,7 @@ apps=(
     zsh-syntax-highlighting
     mousai
     # yay packages
+    anki
     gnome-shell-extension-blur-my-shell
     moosync
     swingmusic-bin
