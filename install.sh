@@ -1,12 +1,14 @@
 #!/bin/bash
 
 . scripts/utils.sh
+. scripts/prerequisites.sh
 # . scripts/osx-defaults.sh
 . scripts/symlinks.sh
 
 # Update system and install essential packages
 info "Updating package manager..."
 sudo pacman -Syu --noconfirm
+yay -Syu --noconfirm
 
 info "Dotfiles intallation initialized..."
 read -rp "Install apps? [y/n] " install_apps
@@ -124,7 +126,7 @@ if [[ "$SHELL" != "/bin/zsh" ]]; then
     printf "\n"
     info "Setting zsh as the default shell..."
     chsh -s $(which zsh)
-    source ~/.zsh
+    source ~/.zshrc
 fi
 
 printf "\n"
