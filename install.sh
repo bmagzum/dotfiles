@@ -104,6 +104,7 @@ if [[ "$install_apps" == "y" ]]; then
     info "Prerequisites"
     info "==================="
 
+    install_yay
     install_packages "${reqs[@]}"
 
     printf "\n"
