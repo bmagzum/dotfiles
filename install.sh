@@ -84,7 +84,7 @@ apps=(
     moosync
     swingmusic-bin
     vlc-pause-click-plugin
-    vscodium-bin    
+    vscodium-bin
     # Add more apps here
 )
 
@@ -96,7 +96,7 @@ fonts=(
     # Add more fonts here
 )
 
-if [[ "$install_apps" == "y"]]; then
+if [[ "$install_apps" == "y" ]]; then
     printf "\n"
     info "==================="
     info "Prerequisites"
