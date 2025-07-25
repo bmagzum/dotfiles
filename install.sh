@@ -15,7 +15,7 @@ read -rp "Install apps? [y/n] " install_apps
 read -rp "Overwrite existing dotfiles? [y/n] " overwrite_dotfiles
 
 # Confirm package installation
-read -rp "Proceed with installing the prerequisites and apps? [y/n] " confirm_install
+read -rp "Proceed with dotfiles installation? [y/n] " confirm_install
 if [[ "$confirm_install" != "y" ]]; then
     echo "Installation aborted."
     exit 1

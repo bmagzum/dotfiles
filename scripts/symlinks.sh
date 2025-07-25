@@ -70,9 +70,7 @@ delete_symlinks() {
         target=$(eval echo "$target")
 
         # Check if the symbolic link or file exists
-        if [ -L "$target" ] || {
-            [ "$include_files" == true ] && [ -f "$target" ]; } || \
-            [ -d "$target"];
+        if [ -L "$target" ] || { [ "$include_files" == true ] && [ -f "$target" ]; }; then
             # Remove the symbolic link or file
             rm -rf "$target"
             success "Deleted: $target"
