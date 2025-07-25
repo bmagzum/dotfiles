@@ -93,7 +93,7 @@ apps=(
 )
 
 fonts=(
-    ttf-atkinson-hyperlegible
+    ttf-atkinson-hyperlegible-next
     ttf-jetbrains-mono
     inter-font
     ttf-jetbrains-mono-nerd
