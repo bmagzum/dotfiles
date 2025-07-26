@@ -4,6 +4,7 @@
 . scripts/prerequisites.sh
 . scripts/symlinks.sh
 . scripts/install-packages.sh
+. scripts/install-yay.sh
 . scripts/set-zsh.sh
 . scripts/packages.sh
 
