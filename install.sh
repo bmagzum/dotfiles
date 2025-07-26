@@ -2,7 +2,6 @@
 
 . scripts/utils.sh
 . scripts/prerequisites.sh
-# . scripts/osx-defaults.sh
 . scripts/symlinks.sh
 
 # Update system and install essential packages
