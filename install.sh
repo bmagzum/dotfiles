@@ -160,10 +160,6 @@ info "===================="
 info "Arch System Defaults"
 info "===================="
 
-# Add system defaults
-# register_keyboard_shortcuts
-# apply_osx_system_defaults
-
 printf "\n"
 info "===================="
 info "Terminal"
