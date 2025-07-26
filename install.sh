@@ -92,6 +92,7 @@ apps=(
     moosync
     swingmusic-bin
     vlc-pause-click-plugin
+    vlsub
     vscodium-bin
     # Add more apps here
 )
