@@ -82,6 +82,10 @@ apps=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     mousai
+    vlc-plugin-ffmepg
+    vlc-plugin-x264
+    vlc-plugin-x265
+    vlc-plugin-str
     # yay packages
     anki
     gnome-shell-extension-blur-my-shell
