@@ -3,6 +3,9 @@
 . scripts/utils.sh
 . scripts/prerequisites.sh
 . scripts/symlinks.sh
+. scripts/install-packages.sh
+. scripts/set-zsh.sh
+. scripts/packages.sh
 
 # Update system and install essential packages
 info "Updating package manager..."
@@ -20,140 +23,35 @@ if [[ "$confirm_install" != "y" ]]; then
     exit 1
 fi
 
-# Install packages
 info "Installing apps"
-install_packages() {
-    local packages=("$@")
-    for pkg in "${packages[@]}"; do
-        if ! sudo pacman -S --noconfirm "$pkg"; then
-            if ! yay -S --noconfirm "$pkg"; then
-                error "Failed to install $pkg"
-                exit 1
-            fi
-        fi
-    done
-}
-
-# Prerequisites list
-reqs=(
-    zsh
-    git
-    cmake
-    # Add more prerequisites here
-)
-
-# Apps list
-apps=(
-    # AUR packages
-    aspell
-    aspell-de
-    aspell-en
-    docker
-    eza
-    fzf
-    firfox
-    gnome-shell-extensions
-    gnome-system-monitor
-    gnome-browser-connector
-    grilo-plugins
-    jre21-openjdk
-    man-db
-    ncdu
-    neovim
-    nodejs
-    npm
-    nvm
-    obsidian
-    proton-vpn-gtk-app
-    ranger
-    starship
-    syncthing
-    tldr
-    tmux
-    unrar
-    vim
-    vlc
-    wezterm
-    wl-clipboard
-    yt-dlp
-    zip
-    zoxide
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-    mousai
-    # yay packages
-    anki
-    gnome-shell-extension-blur-my-shell
-    moosync
-    swingmusic-bin
-    vlc-pause-click-plugin
-    vlc-plugin-pipewire
-    vlc-plugin-pulse
-    vlc-plugin-jpeg
-    vlc-plugin-png
-    vlc-plugin-archive
-    vlc-plugin-aom
-    vlc-plugin-dav1d
-    vlc-plugin-live555
-    vlc-plugin-ytdl-git
-    vlc-plugin-notify
-    vlc-plugin-matroska
-    vlc-plugin-lua-git
-    vlc-plugin-ffmepg
-    vlc-plugin-x264
-    vlc-plugin-x265
-    vlc-plugin-str
-    vlc-plugin-ass
-    vlc-plugin-freetype
-    vlsub-git
-    vscodium-bin
-    vibe-bin
-    # Add more apps here
-)
-
-fonts=(
-    ttf-atkinson-hyperlegible-next
-    ttf-jetbrains-mono
-    inter-font
-    ttf-jetbrains-mono-nerd
-    # Add more fonts here
-)
 
 if [[ "$install_apps" == "y" ]]; then
     printf "\n"
-    info "==================="
+    info "========================="
     info "Prerequisites"
-    info "==================="
+    info "========================="
 
     install_yay
     install_packages "${reqs[@]}"
 
     printf "\n"
-    info "==================="
+    info "========================="
     info "Apps"
-    info "==================="
+    info "========================="
 
-    install_packages "${apps[@]}"
+    install_packages "${pacman_apps[@]}"
+    install_packages "${yay_apps[@]}"
 
     printf "\n"
-    info "==================="
+    info "========================="
     info "Fonts"
-    info "==================="
+    info "========================="
 
     install_packages "${fonts[@]}"
 fi
 
-# Set zsh as the default shell
-if [[ "$SHELL" != "/bin/zsh" ]]; then
-    printf "\n"
-    info "Setting zsh as the default shell..."
-    chsh -s $(which zsh)
-    if [[ $? -ne 0 ]]; then
-        error "Failed to change default shell to zsh"
-        exit 1
-    fi
-    source ~/.zshrc
-fi
+info "Setting zsh as default shell"
+set_zsh
 
 printf "\n"
 info "===================="
