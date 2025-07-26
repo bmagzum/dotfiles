@@ -82,18 +82,33 @@ apps=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     mousai
-    vlc-plugin-ffmepg
-    vlc-plugin-x264
-    vlc-plugin-x265
-    vlc-plugin-str
     # yay packages
     anki
     gnome-shell-extension-blur-my-shell
     moosync
     swingmusic-bin
     vlc-pause-click-plugin
-    vlsub
+    vlc-plugin-pipewire
+    vlc-plugin-pulse
+    vlc-plugin-jpeg
+    vlc-plugin-png
+    vlc-plugin-archive
+    vlc-plugin-aom
+    vlc-plugin-dav1d
+    vlc-plugin-live555
+    vlc-plugin-ytdl-git
+    vlc-plugin-notify
+    vlc-plugin-matroska
+    vlc-plugin-lua-git
+    vlc-plugin-ffmepg
+    vlc-plugin-x264
+    vlc-plugin-x265
+    vlc-plugin-str
+    vlc-plugin-ass
+    vlc-plugin-freetype
+    vlsub-git
     vscodium-bin
+    vibe-bin
     # Add more apps here
 )
 
