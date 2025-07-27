@@ -34,6 +34,7 @@ if [[ "$install_apps" == "y" ]]; then
 
     install_yay
     install_packages "${reqs[@]}"
+    install_packages "${dependencies[@]}"
 
     printf "\n"
     info "========================="

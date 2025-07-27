@@ -50,6 +50,26 @@ yay_apps=(
     moosync
     swingmusic-bin
     vlc-pause-click-plugin
+    vlsub-git
+    vscodium-bin
+    vibe-bin
+    # Add more apps here
+)
+
+fonts=(
+    ttf-atkinson-hyperlegible-next
+    ttf-jetbrains-mono
+    inter-font
+    ttf-jetbrains-mono-nerd
+    # Add more fonts here
+)
+
+dependencies=(
+    vulkan-icd-loader
+    vulkan-mesa-layers
+    vulkan-tools
+    vulkan-intel
+    alsa-plugins
     vlc-plugin-pipewire
     vlc-plugin-pulse
     vlc-plugin-jpeg
@@ -68,16 +88,4 @@ yay_apps=(
     vlc-plugin-str
     vlc-plugin-ass
     vlc-plugin-freetype
-    vlsub-git
-    vscodium-bin
-    vibe-bin
-    # Add more apps here
-)
-
-fonts=(
-    ttf-atkinson-hyperlegible-next
-    ttf-jetbrains-mono
-    inter-font
-    ttf-jetbrains-mono-nerd
-    # Add more fonts here
 )
