@@ -117,10 +117,10 @@ zle -N zle-line-init
 echo -ne '\e[6 q' # Use beam shape cursor on startup
 
 # Yank to the system clipboard
-function vi-yank-xclip {
+function vi-yank-wlclip {
   zle vi-yank
   echo "$CUTBUFFER" | wl-copy
 }
 
-zle -N vi-yank-xclip
-bindkey -M vicmd 'y' vi-yank-xclip
+zle -N vi-yank-wlclip
+bindkey -M vicmd 'y' vi-yank-wlclip
