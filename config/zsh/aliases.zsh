@@ -38,6 +38,7 @@ alias gc='git commit -v'
 alias gcm='git commit -m'
 alias gcmnv='git commit --no-verify -m'
 alias gcanenv='git commit --amend --no-edit --no-verify'
+
 # Function to commit with ticket ID from current branch, with optional push
 quick_commit() {
   local branch_name ticket_id commit_message push_flag
@@ -67,6 +68,7 @@ poetry_run_nvim() {
     nvim "$@"
   fi
 }
+
 alias vi='poetry_run_nvim'
 alias v='poetry_run_nvim'
 
@@ -83,6 +85,5 @@ alias ls="eza --all --icons=always"
 # Lazygit
 alias lg="lazygit"
 
-# Xclip pbcopy/pbpaste
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+# VSCodium for wayland from terminal
+alias codium-wayland='codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland'
