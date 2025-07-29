@@ -47,8 +47,8 @@ pacman_apps=(
 yay_apps=(
     anki
     gnome-shell-extension-blur-my-shell
-    moosync
     swingmusic-bin
+    wora
     vlc-pause-click-plugin
     vlsub-git
     vscodium-bin
