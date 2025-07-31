@@ -24,7 +24,7 @@ NAME="screenshot_$(date +%d%m%Y_%H%M%S).jpg"
 screenshot_folder="$HOME/Pictures/Screenshots/"
 
 # Screenshot Editor
-export GRIMBLAST_EDITOR="pinita"
+export GRIMBLAST_EDITOR="pinta"
 
 # Example for keybindings
 # bind = SUPER, p, exec, grimblast save active
