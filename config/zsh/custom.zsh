@@ -119,13 +119,19 @@ echo -ne '\e[6 q' # Use beam shape cursor on startup
 # Yank to the system clipboard
 function vi-yank-xclip {
   zle vi-yank
-  if [[ -n "$WAYLAND_DISPLAY" && "XDG_RUNTIME_DIR/$WAYLAND_DISPLAY" ]]; then
+
+  if command -v wl-copy >/dev/null; then
+    export WAYLAND_DISPLAY=wayland-1
     echo "$CUTBUFFER" | wl-copy
-  elif command -v xlip &>dev/null; then
-    echo "$CUTBUFFER" | xclip -selection clipboard
-  else
-    echo "No suitable clipboard tool or Wayland socket found" >&2
+    return
   fi
+
+  if command -v xclip >dev/null; then
+    echo "$CUTBUFFER" | xclip -selection clipboard
+    return
+  fi
+
+  echo "No clipboard tool available" >&2
 }
 
 zle -N vi-yank-xclip
