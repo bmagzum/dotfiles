@@ -47,12 +47,14 @@ yay_apps=(
     wezterm-git
     anki
     gnome-shell-extension-blur-my-shell
-    swingmusic-bin
-    wora
+    wora-bin
     vlc-pause-click-plugin
     vlsub-git
     vscodium-bin
     vibe-bin
+    ticktick
+    stayfree
+    qbittorrent
     # Add more apps here
 )
 

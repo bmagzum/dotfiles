@@ -1,0 +1,36 @@
+#!/bin/bash
+
+reqs=(
+    hyrpland-git
+    xdg-desktop-portal-hyprland
+    polkit-gnome-agent
+    qt5-wayland
+    qt6-wayland
+    quickshell-git
+    pipewire
+    wireplumber
+    gmd
+)
+
+apps=(
+    wlogout
+    brightnessctl
+    wpctl
+    pavucontrol
+    nm-connection-editor
+    blueman
+    mission-center
+    grimblast-git
+    qt5ct
+    qt6ct
+    kvantum
+    pinta
+    cliphist
+    fuzzel
+    swww
+    hyprpicker
+    hyprlock
+    hypridle
+    bibata-cursor-theme
+    nwg-look
+)
