@@ -32,3 +32,8 @@ export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
 
 # Hide computer name in terminal
 export DEFAULT_USER="$(whoami)"
+
+# Set WAYLAND_DISPLAY to the existing socket if unset or mismatched
+if [ -z "$WAYLAND_DISPLAY" ] || [ ! -e "/run/user/1000/$WAYLAND_DISPLAY" ]; then
+  export WAYLAND_DISPLAY=wayland-1
+fi
