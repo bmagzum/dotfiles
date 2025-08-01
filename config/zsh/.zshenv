@@ -32,4 +32,3 @@ export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
 
 # Hide computer name in terminal
 export DEFAULT_USER="$(whoami)"
-

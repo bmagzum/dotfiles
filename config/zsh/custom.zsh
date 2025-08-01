@@ -121,7 +121,6 @@ function vi-yank-xclip {
   zle vi-yank
 
   if command -v wl-copy >/dev/null; then
-    export WAYLAND_DISPLAY=wayland-1
     echo "$CUTBUFFER" | wl-copy
     return
   fi
