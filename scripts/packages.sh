@@ -33,7 +33,6 @@ pacman_apps=(
     unrar
     vim
     vlc
-    wezterm
     wl-clipboard
     yt-dlp
     zip
@@ -45,6 +44,7 @@ pacman_apps=(
 )
 
 yay_apps=(
+    wezterm-git
     anki
     gnome-shell-extension-blur-my-shell
     swingmusic-bin
