@@ -1,7 +1,6 @@
 #!/bin/bash
 
 . scripts/utils.sh
-. scripts/prerequisites.sh
 . scripts/symlinks.sh
 . scripts/install-packages.sh
 . scripts/install-yay.sh
