@@ -1,19 +1,10 @@
 #!/bin/bash
 
-# ┌────────────────────────────────────────────┐
-# │░█▀▀░█▀▀░█▀▄░█▀▀░█▀▀░█▀█░█▀▀░█▀▀░█░█░█▀█░▀█▀│
-# │░▀▀█░█░░░█▀▄░█▀▀░█▀▀░█░█░▀▀█░█░░░█▀█░█░█░░█░│
-# │░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░░▀░│
-# └────────────────────────────────────────────┘
-
-# Screenshots will be stored in $HOME by default.
-# The screenshot will be moved into the screenshot directory
-
-# Add this to ~/.config/user-dirs.dirs to save screenshots in a custom folder:
-# XDG_SCREENSHOTS_DIR="$HOME/Screenshots"
-
-prompt='Screenshot'
-mesg="DIR: ~/Screenshots"
+# ┌────────────────────────────────────────┐
+# │░█▀▀░█▀▀░█▀▄░█▀▀░█▀▀░█▀█░█▀▀░█░█░█▀█░▀█▀│
+# │░▀▀█░█░░░█▀▄░█▀▀░█▀▀░█░█░▀▀█░█▀█░█░█░░█░│
+# │░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░▀░▀▀▀░░▀░│
+# └────────────────────────────────────────┘
 
 # Screenshot Filename
 NAME="screenshot_$(date +%d%m%Y_%H%M%S).jpg"
