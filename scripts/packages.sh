@@ -54,7 +54,7 @@ yay_apps=(
     vibe-bin
     ticktick
     stayfree
-    qbittorrent
+    qbittorrent-enhanced-git
     # Add more apps here
 )
 
