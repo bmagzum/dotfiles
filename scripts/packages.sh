@@ -49,7 +49,6 @@ yay_apps=(
     gnome-shell-extension-blur-my-shell
     wora-bin
     vlc-pause-click-plugin
-    vlsub-git
     vscodium-bin
     vibe-bin
     ticktick

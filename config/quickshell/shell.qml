@@ -1,48 +1,40 @@
-import Quickshell
-import Quickshell.Io
 import QtQuick
+import Quickshell
+import Quickshell.Hyprland
+import "bar" as Status
+import "services" as Services
 
-Variants {
-  model: Quickshell.screens;
+// import "bar/widgets/services/dock" as Docks
 
-  delegate: Component {
-    PanelWindow {
-      // the screen from the screens list will be injected into this
-      // property
-      required property var modelData
+ShellRoot {
+    id: root
 
-      // we can then set the window's screen to the injected property
-      screen: modelData
-
-      anchors {
-        top: true
-        left: true
-        right: true
-      }
-
-      implicitHeight: 0
-
-      Text {
-        id: clock
-        anchors.centerIn: parent
-
-        Process {
-          id: dateProc
-          command: ["date"]
-          running: true
-
-          stdout: StdioCollector {
-            onStreamFinished: clock.text = this.text
-          }
-        }
-
-        Timer {
-          interval: 1000
-          running: true
-          repeat: true
-          onTriggered: dateProc.running = true
-        }
-      }
+    Status.Bar {
+        id: topbar
     }
-  }
+
+    // Wallpaper {
+    //     id: walls
+    // }
+
+    Component.onCompleted: {
+        Globals.reloadColors();
+    }
+
+    Services.ArtProcessManager {
+        id: artProcessManager
+        imagePath: Services.WallpaperSingleton.randomImagePath
+    }
+
+    GlobalShortcut {
+        appid: "shell"
+        name: "nextimage"
+        onPressed: {
+            Services.WallpaperSingleton.selectRandomImage();
+        }
+    }
+
+    // Runner {
+        // id: launcher
+    // }
 }
