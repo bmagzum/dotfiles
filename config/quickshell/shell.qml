@@ -1,40 +1,26 @@
-import QtQuick
 import Quickshell
-import Quickshell.Hyprland
-import "bar" as Status
-import "services" as Services
+import Quickshell.Io
+import QtQuick
 
-// import "bar/widgets/services/dock" as Docks
-
-ShellRoot {
-    id: root
-
-    Status.Bar {
-        id: topbar
+PanelWindow {
+    anchors {
+        top: true
+        left: true
+        right: true
     }
 
-    // Wallpaper {
-    //     id: walls
-    // }
+    implicitHeight: 20
 
-    Component.onCompleted: {
-        Globals.reloadColors();
-    }
+    Text {
+        id: clock
+        anchors.centerIn: parent
 
-    Services.ArtProcessManager {
-        id: artProcessManager
-        imagePath: Services.WallpaperSingleton.randomImagePath
-    }
-
-    GlobalShortcut {
-        appid: "shell"
-        name: "nextimage"
-        onPressed: {
-            Services.WallpaperSingleton.selectRandomImage();
+        Process {
+            command: ["date"]
+            running: true
+            stdout: StdioCollector {
+                onStreamFinished: clock.text = this.text
+            }
         }
     }
-
-    // Runner {
-        // id: launcher
-    // }
 }
