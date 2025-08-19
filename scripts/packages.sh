@@ -12,9 +12,9 @@ pacman_apps=(
     eza
     fzf
     firfox
-    gnome-shell-extensions
-    gnome-system-monitor
-    gnome-browser-connector
+    # gnome-shell-extensions
+    # gnome-system-monitor
+    # gnome-browser-connector
     grilo-plugins
     jre21-openjdk
     man-db
@@ -32,8 +32,8 @@ pacman_apps=(
     tmux
     unrar
     vim
-    vlc
     wl-clipboard
+    ffmpeg
     yt-dlp
     zip
     zoxide
@@ -46,14 +46,16 @@ pacman_apps=(
 yay_apps=(
     wezterm-git
     anki
-    gnome-shell-extension-blur-my-shell
+    mpv
+    # gnome-shell-extension-blur-my-shell
     wora-bin
-    vlc-pause-click-plugin
     vscodium-bin
-    vibe-bin
     ticktick
     stayfree
     qbittorrent-enhanced-git
+    onlyoffice-bin
+    subliminal-git
+    notesnook
     # Add more apps here
 )
 
@@ -71,22 +73,4 @@ dependencies=(
     vulkan-tools
     vulkan-intel
     alsa-plugins
-    vlc-plugin-pipewire
-    vlc-plugin-pulse
-    vlc-plugin-jpeg
-    vlc-plugin-png
-    vlc-plugin-archive
-    vlc-plugin-aom
-    vlc-plugin-dav1d
-    vlc-plugin-live555
-    vlc-plugin-ytdl-git
-    vlc-plugin-notify
-    vlc-plugin-matroska
-    vlc-plugin-lua-git
-    vlc-plugin-ffmepg
-    vlc-plugin-x264
-    vlc-plugin-x265
-    vlc-plugin-str
-    vlc-plugin-ass
-    vlc-plugin-freetype
 )
