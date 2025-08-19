@@ -56,6 +56,8 @@ yay_apps=(
     onlyoffice-bin
     subliminal-git
     notesnook
+    restic
+    backrest
     # Add more apps here
 )
 
