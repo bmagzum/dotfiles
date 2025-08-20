@@ -58,6 +58,7 @@ yay_apps=(
     notesnook
     restic
     backrest
+    open-android-backup
     # Add more apps here
 )
 
