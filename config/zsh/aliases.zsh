@@ -1,8 +1,9 @@
 # System
-alias shutdown='sudo systemctl shutdown'
-alias restart='sudo systemctl reboot'
+alias lock='systemctl lock'
+alias logout='systemctl logout'
 alias suspend='sudo systemctl suspend'
-alias sleep='systemctl sleep'
+alias restart='sudo systemctl reboot'
+alias shutdown='sudo systemctl shutdown'
 alias c='clear'
 alias e='exit'
 
