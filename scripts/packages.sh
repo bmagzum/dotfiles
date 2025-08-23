@@ -59,6 +59,7 @@ yay_apps=(
     restic
     backrest
     open-android-backup
+    syncthing-appmenu
     # Add more apps here
 )
 
