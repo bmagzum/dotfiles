@@ -40,6 +40,13 @@ pacman_apps=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     mousai
+    fastfetch
+    hyprsunset
+    qbittorrent
+    reflector
+    telegram-desktop
+    tesseract-data-eng
+    tesseract-data-deu
     # Add more apps here
 )
 
@@ -52,7 +59,6 @@ yay_apps=(
     vscodium-bin
     ticktick
     stayfree
-    qbittorrent-enhanced-git
     onlyoffice-bin
     subliminal-git
     notesnook
@@ -60,6 +66,7 @@ yay_apps=(
     backrest
     open-android-backup
     syncthing-appmenu
+    flutter-bin
     # Add more apps here
 )
 
@@ -77,4 +84,5 @@ dependencies=(
     vulkan-tools
     vulkan-intel
     alsa-plugins
+    cpio
 )
